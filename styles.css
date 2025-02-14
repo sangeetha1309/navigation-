@@ -1,0 +1,111 @@
+/* Basic reset for some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Main navigation bar styling */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 8px 16px;
+}
+
+/* Hover effect on links */
+.navbar a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Styling for dropdowns */
+.dropdown:hover>.dropdown-menu,
+.sub-dropdown:hover>.sub-dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu,
+.sub-dropdown-menu {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    border-radius: 5px;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropdown-menu li a,
+.sub-dropdown-menu li a {
+    padding: 10px 20px;
+    color: white;
+}
+
+/* Hover effect on dropdown items */
+.dropdown-menu li a:hover,
+.sub-dropdown-menu li a:hover {
+    background-color: #555;
+}
+
+/* Sub-dropdown styling */
+.sub-dropdown {
+    position: relative;
+    top: 0;
+    left: 100%;
+    margin-left: 1px;
+}
+
+.sub-dropdown-menu {
+    left: 100%;
+    top: 0;
+}
+
+/* Transition for smoother hover effects */
+.navbar li,
+.dropdown-menu li a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu,
+    .sub-dropdown-menu {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+}
